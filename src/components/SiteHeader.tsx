@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const EXTERNAL_URL = "https://bdggamein.in.net/";
+import { LOGIN_URL, REGISTER_URL } from "@/lib/constants";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -15,9 +14,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="rounded-md border-2 border-primary bg-background px-3 py-1.5 font-display text-lg font-black tracking-wider text-primary md:text-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 md:px-6 md:py-4">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <span className="rounded-md border-2 border-primary bg-background px-2 py-1 font-display text-sm font-black tracking-wider text-primary md:px-3 md:py-1.5 md:text-xl">
             BDG GAME
           </span>
         </Link>
@@ -34,7 +33,15 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href={EXTERNAL_URL}
+            href={LOGIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border-2 border-primary px-4 py-1.5 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            Login
+          </a>
+          <a
+            href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-[image:var(--gradient-gold)] px-5 py-2 text-sm font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
@@ -44,11 +51,12 @@ export function SiteHeader() {
         </nav>
 
         <button
+          type="button"
           aria-label="Toggle menu"
           className="rounded-md p-2 text-primary md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -67,10 +75,18 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href={EXTERNAL_URL}
+              href={LOGIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-lg bg-[image:var(--gradient-gold)] px-4 py-2.5 text-center text-sm font-bold text-primary-foreground"
+              className="mt-2 rounded-lg border-2 border-primary px-4 py-2 text-center text-sm font-bold text-primary"
+            >
+              Login
+            </a>
+            <a
+              href={REGISTER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-[image:var(--gradient-gold)] px-4 py-2.5 text-center text-sm font-bold text-primary-foreground"
             >
               Register Now
             </a>
