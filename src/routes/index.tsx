@@ -204,6 +204,8 @@ function HomePage() {
         </div>
       </section>
 
+      <GuideArticles />
+
       <SiteFooter />
     </div>
   );
