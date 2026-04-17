@@ -47,12 +47,12 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.82_0.16_85/0.18),transparent_60%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <Sparkles size={14} /> Welcome Bonus Up to ₹150
             </span>
-            <h1 className="mt-6 font-display text-4xl font-black leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-6 font-display text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-6xl">
               <span className="bg-[image:var(--gradient-gold)] bg-clip-text text-transparent">
                 BDG Game Login
               </span>
