@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-
-const EXTERNAL_URL = "https://bdggamein.in.net/";
+import { REGISTER_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -63,7 +62,7 @@ function AboutPage() {
         </div>
         <div className="mt-12 text-center">
           <a
-            href={EXTERNAL_URL}
+            href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-xl bg-[image:var(--gradient-gold)] px-8 py-4 font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
