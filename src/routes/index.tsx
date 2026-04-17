@@ -3,8 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Download, Sparkles, Wallet, Trophy, ShieldCheck, Gift } from "lucide-react";
 import { GuideArticles } from "@/components/GuideArticles";
-
-const EXTERNAL_URL = "https://bdggamein.in.net/";
+import { LOGIN_URL, REGISTER_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
   head: () => ({
