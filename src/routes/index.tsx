@@ -63,20 +63,20 @@ function HomePage() {
               BDG Game (bdgwin) is a fast-growing online gaming and colour prediction platform
               featuring Wingo, K3, 5D, Poker, Slots and Aviator — win real rewards, instantly.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href={EXTERNAL_URL}
+                href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-[image:var(--gradient-gold)] px-7 py-3 text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
+                className="w-full rounded-xl bg-[image:var(--gradient-gold)] px-7 py-3 text-center text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105 sm:w-auto"
               >
                 Login Now
               </a>
               <a
-                href={EXTERNAL_URL}
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl border-2 border-primary px-7 py-3 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="w-full rounded-xl border-2 border-primary px-7 py-3 text-center text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:w-auto"
               >
                 Register Free
               </a>
@@ -101,7 +101,7 @@ function HomePage() {
             </div>
             <div className="mt-6 flex justify-center">
               <a
-                href={EXTERNAL_URL}
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-gold)] px-6 py-3 font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
@@ -193,7 +193,7 @@ function HomePage() {
         </div>
         <div className="mt-10 text-center">
           <a
-            href={EXTERNAL_URL}
+            href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-gold)] px-8 py-4 text-lg font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
