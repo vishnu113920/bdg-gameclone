@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
+const YEAR = 2026;
+
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-border/60 bg-card/40">
@@ -29,7 +31,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 border-t border-border/60 pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} BDG Game. All rights reserved.
+          © {YEAR} BDG Game. All rights reserved.
         </div>
       </div>
     </footer>

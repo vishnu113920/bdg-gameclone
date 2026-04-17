@@ -3,8 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Download, Sparkles, Wallet, Trophy, ShieldCheck, Gift } from "lucide-react";
 import { GuideArticles } from "@/components/GuideArticles";
-
-const EXTERNAL_URL = "https://bdggamein.in.net/";
+import { LOGIN_URL, REGISTER_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,12 +47,12 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.82_0.16_85/0.18),transparent_60%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <Sparkles size={14} /> Welcome Bonus Up to ₹150
             </span>
-            <h1 className="mt-6 font-display text-4xl font-black leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-6 font-display text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-6xl">
               <span className="bg-[image:var(--gradient-gold)] bg-clip-text text-transparent">
                 BDG Game Login
               </span>
@@ -64,20 +63,20 @@ function HomePage() {
               BDG Game (bdgwin) is a fast-growing online gaming and colour prediction platform
               featuring Wingo, K3, 5D, Poker, Slots and Aviator — win real rewards, instantly.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href={EXTERNAL_URL}
+                href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-[image:var(--gradient-gold)] px-7 py-3 text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
+                className="w-full rounded-xl bg-[image:var(--gradient-gold)] px-7 py-3 text-center text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105 sm:w-auto"
               >
                 Login Now
               </a>
               <a
-                href={EXTERNAL_URL}
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl border-2 border-primary px-7 py-3 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="w-full rounded-xl border-2 border-primary px-7 py-3 text-center text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:w-auto"
               >
                 Register Free
               </a>
@@ -102,7 +101,7 @@ function HomePage() {
             </div>
             <div className="mt-6 flex justify-center">
               <a
-                href={EXTERNAL_URL}
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-gold)] px-6 py-3 font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
@@ -194,7 +193,7 @@ function HomePage() {
         </div>
         <div className="mt-10 text-center">
           <a
-            href={EXTERNAL_URL}
+            href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-gold)] px-8 py-4 text-lg font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105"
